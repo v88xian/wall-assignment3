@@ -1,0 +1,6 @@
+<div class="comment_item">
+    <div>
+        <span><%= comment.comment_author %> - <%= Moment(comment.comment_created_at).format("LLL") %></span>
+    </div>
+    <span><%- comment.content %></span>                    
+</div>

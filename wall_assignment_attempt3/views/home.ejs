@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="/assets/jquery/index.js"></script>
+</head>
+<body>
+    <div id="header">
+        <p id="header_title">e-Wall</p>
+        <p id="user_details">
+            Welcome <%= CURRENT_USER.first_name %>! | Logout!
+        </p>
+    </div>
+
+    <div id="post_message">
+        <form action="/messages/create" method="post" id="message_form" data-is-processing="0">
+            <label for="">Post a message:
+                <br>
+                <textarea name="message" id="textarea_message" cols="30" rows="10"></textarea>
+            </label>
+            <br>
+            <input type="submit" value="Post">
+        </form>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <%- include("./partials/message_list.partial.ejs", {CURRENT_USER, DATA, HELPER}) %>
+
+    <div>
+        <form action="/comments/create" method="post" id="comment_form" data-is-processing="0">
+            <input type="hidden" name="message_id" id="message_id_input">
+            <input type="hidden" name="comment"id="comment_input">
+        </form>
+        <form action="/messages/delete" method="post" id="message_delete_form" data-is-processing="0">
+            <input type="hidden" name="message_id" id="message_id_delete_input">
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="message_list">
+
+
+
+    <%
+        for(let index = 0; index < DATA?.all_messages?.length; index++){ %>
+
+
+            <%- include("./message_item.partial.ejs", {message: DATA.all_messages[index], Moment: HELPER.Moment} ) %>
+            
+    <%    }
+    %>
+
+
+
+</div>

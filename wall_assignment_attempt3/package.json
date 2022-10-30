@@ -1,0 +1,34 @@
+{
+    "name": "wall",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "devDependencies": {
+        "@babel/cli": "^7.13.0",
+        "@babel/core": "^7.13.1",
+        "@babel/node": "^7.13.0",
+        "@babel/plugin-transform-runtime": "^7.13.10",
+        "@babel/preset-env": "^7.13.5"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.1",
+        "cookie-parser": "^1.4.6",
+        "crypto": "^1.0.1",
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "express-session": "^1.17.3",
+        "fs-extra": "^10.1.0",
+        "js-yaml": "^4.1.0",
+        "md5": "^2.3.0",
+        "memorystore": "^1.6.7",
+        "moment": "^2.29.4",
+        "mysql": "^2.18.1",
+        "nodemon": "^2.0.20"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "NODE_ENV=development nodemon --inspect --exec  node_modules/.bin/babel-node server/app.js"
+    },
+    "author": "",
+    "license": "ISC"
+}

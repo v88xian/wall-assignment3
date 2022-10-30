@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="../assets/jquery/index.js"></script>
+
+</head>
+<body>
+
+    <div id="login_section">
+        <h1>Login</h1>
+
+        <form id="login_form" action="/users/login" method="POST" data-is-processing="0">
+            <ul>
+                <li>
+                    <label for=""> Email Address: 
+                        <input type="email" name="email_address" id="email_address_input" value="ccian3@gmail.com">
+                    </label>
+                </li>
+                <li>
+                    <label for=""> Password: 
+                        <input type="password" name="password" id="password_input" value="33333333">
+                    </label>
+                </li>
+            </ul>
+
+            <input type="submit" value="Login">
+        </form>
+
+    </div>
+
+    <hr>
+
+    <div id="registration_section">
+        <h1>Registration</h1>
+
+        <form id="registration_form" action="/users/register" method="POST" data-is-processing="0">
+            <ul>
+                <li>
+                    <label for=""> First Name: 
+                        <input type="text" name="first_name" id="first_name_input">
+                    </label>
+                </li>
+                <li>
+                    <label for=""> Last Name: 
+                        <input type="text" name="last_name" id="last_name_input">
+                    </label>
+                </li>
+                <li>
+                    <label for=""> Email Address: 
+                        <input type="email" name="email_address" id="email_address_input">
+                    </label>
+                </li>
+                <li>
+                    <label for=""> Password: 
+                        <input type="password" name="password" id="password_input">
+                    </label>
+                </li>
+            </ul>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+</body>
+</html>

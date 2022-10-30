@@ -1,0 +1,30 @@
+<div class="message_item" data-message-item="<%= message.message_id %>" id="message_item_<%= message.message_id %>">
+    <div>
+        <span><%= message.message_author %> - <%= Moment(message.message_created_at).format("LLL")  %></span>
+    </div>
+    <span><%- message.content %></span>
+    <button class="delete_button">X</button>
+
+    <br>
+    <br>
+
+    <div class="comment_list" id="comment_list_<%= message.message_id %>">
+        <%
+            for(let index = 0; index < message.comments.length; index++){ %>
+
+
+                <%- include("./comment_item.partial.ejs", {comment: message.comments[index] , Moment}) %>
+
+        <%    }
+
+        %>
+
+    </div>
+
+    <br>
+    <textarea name="textarea_comment" class="textarea_comment" cols="30" rows="10"></textarea>
+    <input type="button" class="post_comment_button" value="Comment">
+</div>
+
+<hr>
+<hr>
